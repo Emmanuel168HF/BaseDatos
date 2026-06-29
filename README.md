@@ -96,12 +96,19 @@ ORDER BY i.fecha_registro DESC;
 ## 📂 Estructura del Repositorio
 
 ```
-├── 📁 01_fundamentos/        # Apuntes teóricos
-├── 📁 02_modelo_er/          # Diagramas y casos de estudio
-├── 📁 03_modelo_relacional/  # Ejercicios de mapeo
-├── 📁 04_sql_ldd/            # Scripts de creación de esquemas (.sql)
-├── 📁 05_sql_lmd/            # Scripts de consultas y manipulación (.sql)
-└── README.md                 # Presentación del curso
+├── � contenedores-sgbd.md        # Guía de contenedores SGBD
+├── 📄 Ejercicios.md               # Ejercicios del curso
+├── 📄 README.md                   # Presentación del curso
+├── 📁 01-fundamentos-basededatos/ # Conceptos fundamentales de bases de datos
+├── 📁 02-Modelado-basededatos/    # Diseño E-R y transformación
+│   └── 📁 ER-a R/                 # Mapeo de E-R a Relacional
+│       └── 📄 03-diccionariosdatos-controlescolar.md
+├── 📁 03-Construccion-basededatos/ # Implementación con SQL-LDD
+├── 📁 04-LenguajeEstructurado/    # SQL-LDD y SQL-LMD
+├── 📁 contenedores-sgbd/          # Scripts y recursos de contenedores
+│   ├── 📄 01-script.sql           # Scripts SQL
+│   └── 📄 contenedores-sgbd.md
+└── 📁 Image/                      # Imágenes y recursos visuales
 ```
 
 ---
