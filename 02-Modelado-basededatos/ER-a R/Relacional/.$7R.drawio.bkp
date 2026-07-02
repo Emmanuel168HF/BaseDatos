@@ -1,0 +1,26 @@
+<mxfile host="app.diagrams.net">
+<diagram name="7R">
+<mxGraphModel><root>
+<mxCell id="0"/><mxCell id="1" parent="0"/>
+
+<mxCell id="al" value="&lt;b&gt;Alumno&lt;/b&gt;&lt;hr/&gt;🔑 Matricula&lt;br/&gt;Nombre&lt;br/&gt;Ap1&lt;br/&gt;Ap2&lt;br/&gt;Telefono&lt;br/&gt;Correo&lt;br/&gt;FechaNac" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="20" y="20" width="200" height="170" as="geometry"/></mxCell>
+<mxCell id="cred" value="&lt;b&gt;Credencial&lt;/b&gt;&lt;hr/&gt;🔑 NumCredencial&lt;br/&gt;FechaExpedicion&lt;br/&gt;Vigencia&lt;br/&gt;🔗 Matricula(FK)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="270" y="20" width="210" height="120" as="geometry"/></mxCell>
+<mxCell id="mat" value="&lt;b&gt;Materia&lt;/b&gt;&lt;hr/&gt;🔑 ClaveMateria&lt;br/&gt;Nombre&lt;br/&gt;Creditos&lt;br/&gt;🔗 NumProf(FK)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="180" y="250" width="220" height="130" as="geometry"/></mxCell>
+<mxCell id="cur" value="&lt;b&gt;Curso&lt;/b&gt;&lt;hr/&gt;🔗 Matricula(PK,FK)&lt;br/&gt;🔗 ClaveMateria(PK,FK)&lt;br/&gt;CalFinal" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="20" y="430" width="220" height="120" as="geometry"/></mxCell>
+
+<mxCell id="dep" value="&lt;b&gt;Departamento&lt;/b&gt;&lt;hr/&gt;🔑 NumDepto&lt;br/&gt;Nombre&lt;br/&gt;Edificio" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="560" y="20" width="210" height="120" as="geometry"/></mxCell>
+<mxCell id="prof" value="&lt;b&gt;Profesor&lt;/b&gt;&lt;hr/&gt;🔑 NumProf&lt;br/&gt;Nombre&lt;br/&gt;Ap1&lt;br/&gt;Ap2&lt;br/&gt;🔗 NumDepto(FK)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="560" y="180" width="210" height="140" as="geometry"/></mxCell>
+<mxCell id="proy" value="&lt;b&gt;Proyecto&lt;/b&gt;&lt;hr/&gt;🔑 NumProy&lt;br/&gt;Nombre&lt;br/&gt;Presupuesto&lt;br/&gt;🔗 NumDepto(FK)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="850" y="180" width="210" height="140" as="geometry"/></mxCell>
+<mxCell id="part" value="&lt;b&gt;Participa&lt;/b&gt;&lt;hr/&gt;🔗 NumProf(PK,FK)&lt;br/&gt;🔗 NumProy(PK,FK)&lt;br/&gt;FechaInicio&lt;br/&gt;Rol" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="560" y="390" width="220" height="120" as="geometry"/></mxCell>
+<mxCell id="depen" value="&lt;b&gt;Dependiente&lt;/b&gt;&lt;hr/&gt;🔗 NumProf(PK,FK)&lt;br/&gt;NombreDep(PK)&lt;br/&gt;Parentesco&lt;br/&gt;FechaNac" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="850" y="390" width="220" height="120" as="geometry"/></mxCell>
+
+<mxCell id="e1" edge="1" parent="1" source="al" target="cred" value="1:1"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e2" edge="1" parent="1" source="al" target="cur" value="1:N"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e3" edge="1" parent="1" source="mat" target="cur" value="1:N"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e4" edge="1" parent="1" source="dep" target="prof" value="1:N"/><mxGeometry relative="1" as="geometry"/>
+<mxCell id="e5" edge="1" parent="1" source="dep" target="proy" value="1:N"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e6" edge="1" parent="1" source="prof" target="part" value="1:N"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e7" edge="1" parent="1" source="proy" target="part" value="1:N"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="e8" edge="1" parent="1" source="prof" target="depen" value="1:N"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+</root></mxGraphModel></diagram></mxfile>

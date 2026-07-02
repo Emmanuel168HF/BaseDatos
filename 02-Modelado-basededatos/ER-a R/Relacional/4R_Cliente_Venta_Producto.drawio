@@ -1,0 +1,38 @@
+<mxfile host="Electron">
+  <diagram name="4R Cliente-Venta-Producto" id="0">
+    <mxGraphModel dx="1030" dy="722" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Cliente&lt;/b&gt;&lt;hr/&gt;🔑 IdCliente&lt;br/&gt;Nombre" vertex="1">
+          <mxGeometry height="90" width="180" x="40" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="v" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Venta&lt;/b&gt;&lt;hr/&gt;🔑 IdVenta&lt;br/&gt;Fecha&lt;br/&gt;Detalle&lt;br/&gt;🔗 IdCliente (FK)" vertex="1">
+          <mxGeometry height="120" width="220" x="330" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Producto&lt;/b&gt;&lt;hr/&gt;🔑 IdProducto&lt;br/&gt;Nombre&lt;br/&gt;Precio" vertex="1">
+          <mxGeometry height="110" width="220" x="330" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="cv" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Contiene&lt;/b&gt;&lt;hr/&gt;🔗 IdVenta (PK,FK)&lt;br/&gt;🔗 IdProducto (PK,FK)&lt;br/&gt;Cantidad&lt;br/&gt;PrecioProducto" vertex="1">
+          <mxGeometry height="130" width="220" x="40" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="c" target="v" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="v" style="exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.813;entryY=-0.015;entryDx=0;entryDy=0;entryPerimeter=0;" target="cv" value="1 : N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="p" style="entryX=0.5;entryY=1;entryDx=0;entryDy=0;" target="v" value="1 : N">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

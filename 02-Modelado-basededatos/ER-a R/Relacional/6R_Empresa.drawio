@@ -1,0 +1,54 @@
+<mxfile host="Electron">
+  <diagram name="6R Empresa" id="0">
+    <mxGraphModel dx="1030" dy="722" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="emp" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Employee&lt;/b&gt;&lt;hr/&gt;🔑 SSN&lt;br/&gt;FirstName&lt;br/&gt;Address&lt;br/&gt;BirthDate&lt;br/&gt;Salary&lt;br/&gt;Sex&lt;br/&gt;🔗 DeptNumber (FK)" vertex="1">
+          <mxGeometry height="170" width="180" x="20" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dept" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Department&lt;/b&gt;&lt;hr/&gt;🔑 Number&lt;br/&gt;Name&lt;br/&gt;Manager&lt;br/&gt;(Unique)&lt;br/&gt;StartDate" vertex="1">
+          <mxGeometry height="150" width="200" x="280" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="loc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Locations&lt;/b&gt;&lt;hr/&gt;🔑 IdLocation&lt;br/&gt;🔗 DeptNumber (FK)&lt;br/&gt;Location" vertex="1">
+          <mxGeometry height="120" width="180" x="560" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="proj" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Projects&lt;/b&gt;&lt;hr/&gt;🔑 Number&lt;br/&gt;Name&lt;br/&gt;Location&lt;br/&gt;🔗 DeptNumber (FK)" vertex="1">
+          <mxGeometry height="140" width="200" x="340" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="depen" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Dependent&lt;/b&gt;&lt;hr/&gt;🔑 IdDependent&lt;br/&gt;Name&lt;br/&gt;SSN&lt;br/&gt;Sex&lt;br/&gt;Relationship&lt;br/&gt;BirthDate" vertex="1">
+          <mxGeometry height="160" width="190" x="20" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="works" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Works_On&lt;/b&gt;&lt;hr/&gt;🔗 SSN (PK)&lt;br/&gt;🔗 ProjectNumber (FK)&lt;br/&gt;Hours" vertex="1">
+          <mxGeometry height="110" width="210" x="300" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="emp" target="dept" value="N:1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="dept" target="loc" value="1:N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="dept" style="entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.558;exitY=1.008;exitDx=0;exitDy=0;exitPerimeter=0;" target="proj" value="1:N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="emp" target="depen" value="1:N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="emp" style="entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.989;exitY=0.932;exitDx=0;exitDy=0;exitPerimeter=0;" target="works" value="1:N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="260" y="180" />
+              <mxPoint x="270" y="410" />
+              <mxPoint x="353" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="proj" style="exitX=0.462;exitY=1.003;exitDx=0;exitDy=0;exitPerimeter=0;" value="1:N">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="430" y="460" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

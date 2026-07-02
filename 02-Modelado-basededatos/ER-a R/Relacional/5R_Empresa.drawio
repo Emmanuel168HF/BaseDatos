@@ -1,0 +1,69 @@
+<mxfile host="Electron">
+  <diagram name="5R Empresa" id="0">
+    <mxGraphModel dx="1030" dy="722" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="emp" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Employee&lt;/b&gt;&lt;hr/&gt;🔑 SSN&lt;br/&gt;FirstName&lt;br/&gt;LastName&lt;br/&gt;Address&lt;br/&gt;BirthDate&lt;br/&gt;Salary&lt;br/&gt;Sex&lt;br/&gt;🔗 DNo (FK)" vertex="1">
+          <mxGeometry height="180" width="190" x="30" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="dep" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Department&lt;/b&gt;&lt;hr/&gt;🔑 Number&lt;br/&gt;Name&lt;br/&gt;🔗 ManagerSSN (FK, Unique)&lt;br/&gt;StartDate" vertex="1">
+          <mxGeometry height="140" width="220" x="340" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="loc" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Locations&lt;/b&gt;&lt;hr/&gt;🔑 IdLocation&lt;br/&gt;🔗 DeptNumber (FK)&lt;br/&gt;Location" vertex="1">
+          <mxGeometry height="120" width="180" x="620" y="50" as="geometry" />
+        </mxCell>
+        <mxCell id="proj" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Projects&lt;/b&gt;&lt;hr/&gt;🔑 Number&lt;br/&gt;Name&lt;br/&gt;Location&lt;br/&gt;🔗 DeptNumber (FK)" vertex="1">
+          <mxGeometry height="140" width="220" x="360" y="250" as="geometry" />
+        </mxCell>
+        <mxCell id="depen" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Dependent&lt;/b&gt;&lt;hr/&gt;🔑 IdDependent&lt;br/&gt;Name&lt;br/&gt;🔗 SSN (FK)&lt;br/&gt;Sex&lt;br/&gt;Relationship&lt;br/&gt;BirthDate" vertex="1">
+          <mxGeometry height="160" width="210" x="30" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="works" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;Works_On&lt;/b&gt;&lt;hr/&gt;🔗 SSN (PK,FK)&lt;br/&gt;🔗 ProjectNumber (PK,FK)&lt;br/&gt;Hours" vertex="1">
+          <mxGeometry height="120" width="220" x="300" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="emp" style="shape=wire;dashed=1;endArrow=none;endFill=0;" target="dep" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="dep" target="loc" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="dep" style="entryX=0.405;entryY=0.031;entryDx=0;entryDy=0;entryPerimeter=0;" target="proj" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="emp" target="depen" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="emp" style="entryX=0.107;entryY=0;entryDx=0;entryDy=0;exitX=0.989;exitY=0.871;exitDx=0;exitDy=0;entryPerimeter=0;exitPerimeter=0;" target="works" value="1 : N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="proj" style="entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitX=0.456;exitY=0.997;exitDx=0;exitDy=0;exitPerimeter=0;" target="works" value="1 : N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7jChv4YKnBA1-lKXievt-1" edge="1" parent="1" source="dep" style="exitX=1;exitY=0.75;exitDx=0;exitDy=0;" target="proj" value="1 : N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="590" y="145" />
+              <mxPoint x="590" y="210" />
+              <mxPoint x="590" y="240" />
+              <mxPoint x="640" y="240" />
+              <mxPoint x="640" y="320" />
+            </Array>
+            <mxPoint x="670" y="180" as="sourcePoint" />
+            <mxPoint x="786" y="513" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="7jChv4YKnBA1-lKXievt-2" edge="1" parent="1" value="N : 1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="220" y="80" as="sourcePoint" />
+            <mxPoint x="340" y="80" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

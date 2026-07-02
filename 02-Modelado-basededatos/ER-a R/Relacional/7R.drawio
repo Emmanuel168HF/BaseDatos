@@ -1,0 +1,63 @@
+<mxfile host="Electron">
+  <diagram name="7R" id="0">
+    <mxGraphModel dx="1030" dy="722" grid="1" gridSize="10" guides="0" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxGeometry relative="1" as="geometry" id="koKhOSCwTbcmIDsU8cV4-0">
+          <mxCell />
+        </mxGeometry>
+        <mxCell id="1" parent="koKhOSCwTbcmIDsU8cV4-0" />
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-22" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="ALUMNO&#xa;Matricula PK&#xa;Nombre&#xa;Apellido1&#xa;Apellido2&#xa;Telefono&#xa;Correo&#xa;FechaNacimiento" vertex="1">
+          <mxGeometry height="140" width="180" x="40" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-23" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="CREDENCIAL&#xa;NumCredencial PK&#xa;FechaExpedicion&#xa;Vigencia&#xa;Matricula FK" vertex="1">
+          <mxGeometry height="100" width="180" x="280" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-24" edge="1" parent="1" source="Oi5HcwpqH6OXF7zUcfnu-22" style="endArrow=none;fontSize=12;" target="Oi5HcwpqH6OXF7zUcfnu-23" value="1..1 — 1..1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-25" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="MATERIA&#xa;ClaveMateria PK&#xa;Nombre&#xa;Creditos&#xa;NumProf FK" vertex="1">
+          <mxGeometry height="100" width="180" x="40" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-26" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="CURSO&#xa;Matricula PK,FK&#xa;ClaveMateria PK,FK&#xa;CalificacionFinal" vertex="1">
+          <mxGeometry height="100" width="180" x="280" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-27" edge="1" parent="1" source="Oi5HcwpqH6OXF7zUcfnu-22" style="endArrow=none;fontSize=12;" target="Oi5HcwpqH6OXF7zUcfnu-26" value="1 — N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-28" edge="1" parent="1" source="Oi5HcwpqH6OXF7zUcfnu-25" style="endArrow=none;fontSize=12;" target="Oi5HcwpqH6OXF7zUcfnu-26" value="1 — N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-29" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="DEPARTAMENTO&#xa;NumDepto PK&#xa;Nombre&#xa;Edificio" vertex="1">
+          <mxGeometry height="80" width="180" x="40" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-30" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="PROFESOR&#xa;NumProf PK&#xa;Nombre&#xa;Apellido1&#xa;Apellido2&#xa;NumDepto FK" vertex="1">
+          <mxGeometry height="100" width="180" x="280" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-31" edge="1" parent="1" source="Oi5HcwpqH6OXF7zUcfnu-29" style="endArrow=none;fontSize=12;" target="Oi5HcwpqH6OXF7zUcfnu-30" value="1 — N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-32" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="PROYECTO&#xa;NumProyecto PK&#xa;Nombre&#xa;Presupuesto&#xa;NumDepto FK" vertex="1">
+          <mxGeometry height="100" width="180" x="40" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-33" edge="1" parent="1" source="Oi5HcwpqH6OXF7zUcfnu-29" style="endArrow=none;fontSize=12;" target="Oi5HcwpqH6OXF7zUcfnu-32" value="1 — N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-34" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="PARTICIPA&#xa;NumProf PK,FK&#xa;NumProyecto PK,FK&#xa;FechaInicio&#xa;Rol" vertex="1">
+          <mxGeometry height="100" width="180" x="280" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-35" edge="1" parent="1" source="Oi5HcwpqH6OXF7zUcfnu-30" style="endArrow=none;fontSize=12;" target="Oi5HcwpqH6OXF7zUcfnu-34" value="N — M">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-36" edge="1" parent="1" source="Oi5HcwpqH6OXF7zUcfnu-32" style="endArrow=none;fontSize=12;" target="Oi5HcwpqH6OXF7zUcfnu-34" value="N — M">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-37" parent="1" style="shape=rectangle;whiteSpace=wrap;html=1;" value="DEPENDIENTE&#xa;NumProf FK&#xa;NombreDep PK&#xa;Parentesco&#xa;FechaNacimiento" vertex="1">
+          <mxGeometry height="100" width="180" x="520" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="Oi5HcwpqH6OXF7zUcfnu-38" edge="1" parent="1" source="Oi5HcwpqH6OXF7zUcfnu-30" style="endArrow=none;fontSize=12;" target="Oi5HcwpqH6OXF7zUcfnu-37" value="1 — N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,9 @@
+<mxfile host="app.diagrams.net">
+<diagram name="1R Paciente-Expediente">
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10"><root>
+<mxCell id="0"/><mxCell id="1" parent="0"/>
+<mxCell id="pac" value="&lt;b&gt;Paciente&lt;/b&gt;&lt;hr/&gt;🔑 NumPac&lt;br/&gt;Nombre&lt;br/&gt;Apellido1&lt;br/&gt;Apellido2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="100" width="180" height="120" as="geometry"/></mxCell>
+<mxCell id="exp" value="&lt;b&gt;Expediente&lt;/b&gt;&lt;hr/&gt;🔑 NumExp&lt;br/&gt;Fecha&lt;br/&gt;Diagnostico&lt;br/&gt;🔗 NumPac (FK)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="330" y="100" width="200" height="120" as="geometry"/></mxCell>
+<mxCell id="e1" edge="1" parent="1" source="pac" target="exp" value="1 : 1"><mxGeometry relative="1" as="geometry"/></mxCell>
+</root></mxGraphModel>
+</diagram></mxfile>
