@@ -1,0 +1,10 @@
+<mxfile host="app.diagrams.net">
+<diagram name="3R Alumno-Materia-Inscribe">
+<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10"><root>
+<mxCell id="0"/><mxCell id="1" parent="0"/>
+<mxCell id="a" value="&lt;b&gt;Alumno&lt;/b&gt;&lt;hr/&gt;🔑 IdAlumno&lt;br/&gt;Matricula&lt;br/&gt;Nombre&lt;br/&gt;Apellido1&lt;br/&gt;Apellido2&lt;br/&gt;Semestre" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="40" width="220" height="160" as="geometry"/></mxCell>
+<mxCell id="m" value="&lt;b&gt;Materia&lt;/b&gt;&lt;hr/&gt;🔑 IdMateria&lt;br/&gt;NombreMateria&lt;br/&gt;Creditos" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="310" width="220" height="110" as="geometry"/></mxCell>
+<mxCell id="i" value="&lt;b&gt;Inscribe&lt;/b&gt;&lt;hr/&gt;🔗 IdMateria (FK)&lt;br/&gt;🔗 IdAlumno (FK)&lt;br/&gt;FechaInscripcion&lt;br/&gt;Calificacion" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="390" y="170" width="230" height="140" as="geometry"/></mxCell>
+<mxCell id="r1" edge="1" parent="1" source="a" target="i" value="1 : N"><mxGeometry relative="1" as="geometry"/></mxCell>
+<mxCell id="r2" edge="1" parent="1" source="m" target="i" value="1 : N"><mxGeometry relative="1" as="geometry"/></mxCell>
+</root></mxGraphModel></diagram></mxfile>

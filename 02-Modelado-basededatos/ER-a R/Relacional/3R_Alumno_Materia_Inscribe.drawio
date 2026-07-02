@@ -1,10 +1,70 @@
-<mxfile host="app.diagrams.net">
-<diagram name="3R Alumno-Materia-Inscribe">
-<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10"><root>
-<mxCell id="0"/><mxCell id="1" parent="0"/>
-<mxCell id="a" value="&lt;b&gt;Alumno&lt;/b&gt;&lt;hr/&gt;🔑 IdAlumno&lt;br/&gt;Matricula&lt;br/&gt;Nombre&lt;br/&gt;Apellido1&lt;br/&gt;Apellido2&lt;br/&gt;Semestre" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="40" width="220" height="160" as="geometry"/></mxCell>
-<mxCell id="m" value="&lt;b&gt;Materia&lt;/b&gt;&lt;hr/&gt;🔑 IdMateria&lt;br/&gt;NombreMateria&lt;br/&gt;Creditos" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="310" width="220" height="110" as="geometry"/></mxCell>
-<mxCell id="i" value="&lt;b&gt;Inscribe&lt;/b&gt;&lt;hr/&gt;🔗 IdMateria (FK)&lt;br/&gt;🔗 IdAlumno (FK)&lt;br/&gt;FechaInscripcion&lt;br/&gt;Calificacion" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="390" y="170" width="230" height="140" as="geometry"/></mxCell>
-<mxCell id="r1" edge="1" parent="1" source="a" target="i" value="1 : N"><mxGeometry relative="1" as="geometry"/></mxCell>
-<mxCell id="r2" edge="1" parent="1" source="m" target="i" value="1 : N"><mxGeometry relative="1" as="geometry"/></mxCell>
-</root></mxGraphModel></diagram></mxfile>
+<mxfile host="Electron">
+  <diagram name="3R Alumno-Materia-Inscribe" id="0">
+    <mxGraphModel dx="1269" dy="722" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="HtncZmVq1n22kIE1BVkL-61" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="ALUMNO" vertex="1">
+          <mxGeometry height="210" width="220" x="120" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-62" parent="HtncZmVq1n22kIE1BVkL-61" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;fontStyle=4" value="IdAlumno PK" vertex="1">
+          <mxGeometry height="30" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-63" parent="HtncZmVq1n22kIE1BVkL-61" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Matricula" vertex="1">
+          <mxGeometry height="30" width="220" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-64" parent="HtncZmVq1n22kIE1BVkL-61" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Nombre" vertex="1">
+          <mxGeometry height="30" width="220" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-65" parent="HtncZmVq1n22kIE1BVkL-61" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Apellido1" vertex="1">
+          <mxGeometry height="30" width="220" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-66" parent="HtncZmVq1n22kIE1BVkL-61" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Apellido2" vertex="1">
+          <mxGeometry height="30" width="220" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-67" parent="HtncZmVq1n22kIE1BVkL-61" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Semestre" vertex="1">
+          <mxGeometry height="30" width="220" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-68" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="MATERIA" vertex="1">
+          <mxGeometry height="120" width="220" x="120" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-69" parent="HtncZmVq1n22kIE1BVkL-68" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;fontStyle=4" value="IdMateria PK" vertex="1">
+          <mxGeometry height="30" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-70" parent="HtncZmVq1n22kIE1BVkL-68" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="NombreMateria" vertex="1">
+          <mxGeometry height="30" width="220" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-71" parent="HtncZmVq1n22kIE1BVkL-68" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Creditos" vertex="1">
+          <mxGeometry height="30" width="220" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-72" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="INSCRIBE" vertex="1">
+          <mxGeometry height="150" width="230" x="470" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-73" parent="HtncZmVq1n22kIE1BVkL-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="IdMateria FK" vertex="1">
+          <mxGeometry height="30" width="230" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-74" parent="HtncZmVq1n22kIE1BVkL-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="IdAlumno FK" vertex="1">
+          <mxGeometry height="30" width="230" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-75" parent="HtncZmVq1n22kIE1BVkL-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="FechaInscripcion" vertex="1">
+          <mxGeometry height="30" width="230" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-76" parent="HtncZmVq1n22kIE1BVkL-72" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Calificacion" vertex="1">
+          <mxGeometry height="30" width="230" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-77" edge="1" parent="1" source="HtncZmVq1n22kIE1BVkL-66" style="endArrow=none;fontSize=12;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.25;exitDx=0;exitDy=0;" target="HtncZmVq1n22kIE1BVkL-73" value="1 — N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HtncZmVq1n22kIE1BVkL-78" edge="1" parent="1" source="HtncZmVq1n22kIE1BVkL-68" style="endArrow=none;fontSize=12;entryX=0.116;entryY=1.147;entryDx=0;entryDy=0;entryPerimeter=0;" target="HtncZmVq1n22kIE1BVkL-76" value="1 — N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="420" y="500" />
+              <mxPoint x="497" y="500" />
+            </Array>
+            <mxPoint x="460" y="450" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

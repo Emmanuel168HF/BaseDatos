@@ -123,8 +123,7 @@ ORDER BY i.fecha_registro DESC;
 
 ## 👤 Autor
 
-- **[Tu Nombre Aquí]**
-- [Tu Enlace a LinkedIn o Email]
+- **[ARMANDO EMMANUEL GOMEZ ALMARAZ]**
 
 ---
 

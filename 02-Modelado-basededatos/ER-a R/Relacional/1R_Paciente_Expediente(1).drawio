@@ -1,9 +1,43 @@
-<mxfile host="app.diagrams.net">
-<diagram name="1R Paciente-Expediente">
-<mxGraphModel dx="1200" dy="800" grid="1" gridSize="10"><root>
-<mxCell id="0"/><mxCell id="1" parent="0"/>
-<mxCell id="pac" value="&lt;b&gt;Paciente&lt;/b&gt;&lt;hr/&gt;🔑 NumPac&lt;br/&gt;Nombre&lt;br/&gt;Apellido1&lt;br/&gt;Apellido2" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="40" y="100" width="180" height="120" as="geometry"/></mxCell>
-<mxCell id="exp" value="&lt;b&gt;Expediente&lt;/b&gt;&lt;hr/&gt;🔑 NumExp&lt;br/&gt;Fecha&lt;br/&gt;Diagnostico&lt;br/&gt;🔗 NumPac (FK)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1"><mxGeometry x="330" y="100" width="200" height="120" as="geometry"/></mxCell>
-<mxCell id="e1" edge="1" parent="1" source="pac" target="exp" value="1 : 1"><mxGeometry relative="1" as="geometry"/></mxCell>
-</root></mxGraphModel>
-</diagram></mxfile>
+<mxfile host="Electron">
+  <diagram name="1R Paciente-Expediente" id="0">
+    <mxGraphModel dx="1336" dy="760" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="mGEE12lhhBAI1g-3FY2n-1" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="PACIENTE" vertex="1">
+          <mxGeometry height="150" width="160" x="170" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="mGEE12lhhBAI1g-3FY2n-2" parent="mGEE12lhhBAI1g-3FY2n-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="&lt;u&gt;NumPac PK&lt;/u&gt;" vertex="1">
+          <mxGeometry height="30" width="160" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mGEE12lhhBAI1g-3FY2n-3" parent="mGEE12lhhBAI1g-3FY2n-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Nombre" vertex="1">
+          <mxGeometry height="30" width="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mGEE12lhhBAI1g-3FY2n-4" parent="mGEE12lhhBAI1g-3FY2n-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Apellido1" vertex="1">
+          <mxGeometry height="30" width="160" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="mGEE12lhhBAI1g-3FY2n-5" parent="mGEE12lhhBAI1g-3FY2n-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Apellido2" vertex="1">
+          <mxGeometry height="30" width="160" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mGEE12lhhBAI1g-3FY2n-6" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="EXPEDIENTE" vertex="1">
+          <mxGeometry height="150" width="160" x="410" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="mGEE12lhhBAI1g-3FY2n-7" parent="mGEE12lhhBAI1g-3FY2n-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="&lt;u&gt;NumExp PK&lt;/u&gt;" vertex="1">
+          <mxGeometry height="30" width="160" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="mGEE12lhhBAI1g-3FY2n-8" parent="mGEE12lhhBAI1g-3FY2n-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Fecha" vertex="1">
+          <mxGeometry height="30" width="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="mGEE12lhhBAI1g-3FY2n-9" parent="mGEE12lhhBAI1g-3FY2n-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Diagnostico" vertex="1">
+          <mxGeometry height="30" width="160" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="mGEE12lhhBAI1g-3FY2n-10" parent="mGEE12lhhBAI1g-3FY2n-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="NumPac FK" vertex="1">
+          <mxGeometry height="30" width="160" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="mGEE12lhhBAI1g-3FY2n-11" edge="1" parent="1" source="mGEE12lhhBAI1g-3FY2n-1" style="endArrow=none;fontSize=12;" target="mGEE12lhhBAI1g-3FY2n-6" value="1 — 1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,33 +1,62 @@
-<mxfile host="app.diagrams.net">
-  <diagram name="2R Profesor-Curso-Especialidad">
-    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10">
+<mxfile host="Electron">
+  <diagram name="2R Profesor-Curso-Especialidad" id="0">
+    <mxGraphModel dx="1030" dy="722" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-
-        <mxCell id="prof" value="&lt;b&gt;Profesor&lt;/b&gt;&lt;hr/&gt;PK NumProf&lt;br/&gt;Nombre&lt;br/&gt;Apellido1&lt;br/&gt;Apellido2"
-          style="shape=swimlane;startSize=28;html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="40" y="40" width="180" height="140" as="geometry"/>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-11" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="PROFESOR" vertex="1">
+          <mxGeometry height="150" width="160" x="150" y="180" as="geometry" />
         </mxCell>
-
-        <mxCell id="curso" value="&lt;b&gt;Curso&lt;/b&gt;&lt;hr/&gt;PK NumCurso&lt;br/&gt;NombreCurso&lt;br/&gt;Creditos&lt;br/&gt;FK NumProf"
-          style="shape=swimlane;startSize=28;html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="330" y="40" width="180" height="140" as="geometry"/>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-12" parent="o51x5MwQxgtcBcNHYk9S-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;fontStyle=4" value="NumProf PK" vertex="1">
+          <mxGeometry height="30" width="160" y="30" as="geometry" />
         </mxCell>
-
-        <mxCell id="esp" value="&lt;b&gt;Especialidad&lt;/b&gt;&lt;hr/&gt;PK NumEsp&lt;br/&gt;Nombre&lt;br/&gt;FK NumProf"
-          style="shape=swimlane;startSize=28;html=1;whiteSpace=wrap;" vertex="1" parent="1">
-          <mxGeometry x="330" y="250" width="180" height="120" as="geometry"/>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-13" parent="o51x5MwQxgtcBcNHYk9S-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" value="Nombre" vertex="1">
+          <mxGeometry height="30" width="160" y="60" as="geometry" />
         </mxCell>
-
-        <mxCell id="e1" edge="1" parent="1" source="prof" target="curso" value="1:N">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-14" parent="o51x5MwQxgtcBcNHYk9S-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" value="Apellido1" vertex="1">
+          <mxGeometry height="30" width="160" y="90" as="geometry" />
         </mxCell>
-
-        <mxCell id="e2" edge="1" parent="1" source="prof" target="esp" value="1:N">
-          <mxGeometry relative="1" as="geometry"/>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-15" parent="o51x5MwQxgtcBcNHYk9S-11" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;html=1;" value="Apellido2" vertex="1">
+          <mxGeometry height="30" width="160" y="120" as="geometry" />
         </mxCell>
-
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-16" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="CURSO" vertex="1">
+          <mxGeometry height="150" width="160" x="390" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-17" parent="o51x5MwQxgtcBcNHYk9S-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;fontStyle=4" value="NumCurso PK" vertex="1">
+          <mxGeometry height="30" width="160" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-18" parent="o51x5MwQxgtcBcNHYk9S-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="NombreCurso" vertex="1">
+          <mxGeometry height="30" width="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-19" parent="o51x5MwQxgtcBcNHYk9S-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Creditos" vertex="1">
+          <mxGeometry height="30" width="160" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-20" parent="o51x5MwQxgtcBcNHYk9S-16" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="NumProf FK" vertex="1">
+          <mxGeometry height="30" width="160" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-21" edge="1" parent="1" source="o51x5MwQxgtcBcNHYk9S-11" style="endArrow=none;fontSize=12;" target="o51x5MwQxgtcBcNHYk9S-16" value="1 — N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-22" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="ESPECIALIDAD" vertex="1">
+          <mxGeometry height="120" width="160" x="390" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-23" parent="o51x5MwQxgtcBcNHYk9S-22" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;fontStyle=4" value="NumEsp PK" vertex="1">
+          <mxGeometry height="30" width="160" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-24" parent="o51x5MwQxgtcBcNHYk9S-22" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="Nombre" vertex="1">
+          <mxGeometry height="30" width="160" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-25" parent="o51x5MwQxgtcBcNHYk9S-22" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;html=1;" value="NumProf FK" vertex="1">
+          <mxGeometry height="30" width="160" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="o51x5MwQxgtcBcNHYk9S-26" edge="1" parent="1" source="o51x5MwQxgtcBcNHYk9S-15" style="endArrow=none;fontSize=12;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=0.815;exitY=0.933;exitDx=0;exitDy=0;exitPerimeter=0;" target="o51x5MwQxgtcBcNHYk9S-23" value="1 — N">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="280" y="400" />
+              <mxPoint x="340" y="400" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
