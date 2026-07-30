@@ -1,0 +1,83 @@
+<mxfile host="Electron">
+  <diagram name="Comercializadora - Relacional" id="UWox_Lq_6rt2gFklzifk">
+    <mxGraphModel dx="1036" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-1" parent="1" style="html=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;spacingLeft=8;" value="&lt;b&gt;PRODUCTO&lt;/b&gt;&lt;br&gt;PK producto_id&lt;br&gt;PK fabricante_id&lt;br&gt;descripcion (UQ)&lt;br&gt;precio&lt;br&gt;existencia&lt;br&gt;created_at&lt;br&gt;updated_at" vertex="1">
+          <mxGeometry height="170" width="190" x="80" y="115" as="geometry" />
+        </mxCell>
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-2" parent="1" style="html=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;align=left;spacingLeft=8;" value="&lt;b&gt;REPRESENTANTE&lt;/b&gt;&lt;br&gt;PK representante_id&lt;br&gt;nombre&lt;br&gt;apellido_paterno&lt;br&gt;apellido_materno&lt;br&gt;fecha_contrato&lt;br&gt;fecha_nacimiento&lt;br&gt;puesto&lt;br&gt;cuota&lt;br&gt;venta&lt;br&gt;FK representante_id_jefe&lt;br&gt;FK oficina_id&lt;br&gt;created_at&lt;br&gt;updated_at" vertex="1">
+          <mxGeometry height="290" width="230" x="347.5" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-3" parent="1" style="html=1;whiteSpace=wrap;fillColor=#fff2cc;strokeColor=#d6b656;align=left;spacingLeft=8;" value="&lt;b&gt;OFICINA&lt;/b&gt;&lt;br&gt;PK oficina_id&lt;br&gt;ciudad (UQ)&lt;br&gt;region&lt;br&gt;objetivo&lt;br&gt;venta&lt;br&gt;FK representante_id&lt;br&gt;created_at&lt;br&gt;updated_at" vertex="1">
+          <mxGeometry height="175" width="205" x="360" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-4" parent="1" style="html=1;whiteSpace=wrap;fillColor=#f8cecc;strokeColor=#b85450;align=left;spacingLeft=8;" value="&lt;b&gt;CLIENTE&lt;/b&gt;&lt;br&gt;PK cliente_id&lt;br&gt;empresa (UQ)&lt;br&gt;limite_credito&lt;br&gt;FK representante_id&lt;br&gt;created_at&lt;br&gt;updated_at" vertex="1">
+          <mxGeometry height="150" width="205" x="690" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-5" parent="1" style="html=1;whiteSpace=wrap;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;spacingLeft=8;" value="&lt;b&gt;PEDIDO&lt;/b&gt;&lt;br&gt;PK pedido_id&lt;br&gt;fecha_pedido&lt;br&gt;FK cliente_id&lt;br&gt;FK representante_id&lt;br&gt;created_at&lt;br&gt;updated_at" vertex="1">
+          <mxGeometry height="150" width="200" x="720" y="385" as="geometry" />
+        </mxCell>
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-6" parent="1" style="html=1;whiteSpace=wrap;fillColor=#f5f5f5;strokeColor=#666666;align=left;spacingLeft=8;" value="&lt;b&gt;DETALLE_PEDIDO&lt;/b&gt;&lt;br&gt;PK, FK pedido_id&lt;br&gt;PK, FK producto_id&lt;br&gt;PK, FK fabricante_id&lt;br&gt;cantidad&lt;br&gt;precio_venta&lt;br&gt;created_at&lt;br&gt;updated_at" vertex="1">
+          <mxGeometry height="180" width="220" x="1030" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-7" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=#ffffff;fontStyle=1;endArrow=none;endFill=0;" value="1 : N  |  oficina_id">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="530" y="285" as="sourcePoint" />
+            <mxPoint x="530" y="440" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-8" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=#ffffff;fontStyle=1;endArrow=none;endFill=0;" value="1 : N  |  representante_id (encargado)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="440" as="sourcePoint" />
+            <mxPoint x="380" y="285" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-9" edge="1" parent="1" source="nyRPsjxCDi0gk8mtZ6s3-2" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=#ffffff;fontStyle=1;exitX=0;exitY=0.75;entryX=0.004;entryY=0.29;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;innerLoopWaypoints=1;endArrow=none;endFill=0;" target="nyRPsjxCDi0gk8mtZ6s3-2" value="1 : N  |  representante_id_jefe">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="300" y="657.5" />
+              <mxPoint x="300" y="524.1" />
+            </Array>
+            <mxPoint x="310" y="650.25" as="sourcePoint" />
+            <mxPoint x="310" y="519.75" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-10" edge="1" parent="1" source="nyRPsjxCDi0gk8mtZ6s3-2" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=#ffffff;fontStyle=1;endArrow=none;endFill=0;" target="nyRPsjxCDi0gk8mtZ6s3-4" value="1 : N  |  representante_id">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="700" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-11" edge="1" parent="1" source="nyRPsjxCDi0gk8mtZ6s3-4" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=#ffffff;fontStyle=1;endArrow=none;endFill=0;" target="nyRPsjxCDi0gk8mtZ6s3-5" value="1 : N  |  cliente_id">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-12" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=#ffffff;fontStyle=1;endArrow=none;endFill=0;" value="1 : N  |  representante_id">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="648.8" y="680" />
+              <mxPoint x="648.8" y="520" />
+            </Array>
+            <mxPoint x="577.5" y="680" as="sourcePoint" />
+            <mxPoint x="720" y="520" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-13" edge="1" parent="1" source="nyRPsjxCDi0gk8mtZ6s3-5" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=#ffffff;fontStyle=1;endArrow=none;endFill=0;" target="nyRPsjxCDi0gk8mtZ6s3-6" value="1 : N  |  pedido_id">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="nyRPsjxCDi0gk8mtZ6s3-14" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;html=1;labelBackgroundColor=#ffffff;fontStyle=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;shape=wire;dashed=1;endArrow=none;endFill=0;" target="nyRPsjxCDi0gk8mtZ6s3-4" value="1 : N  |  producto_id + fabricante_id">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="223.3" y="90" />
+              <mxPoint x="792.5" y="90" />
+            </Array>
+            <mxPoint x="223.3" y="115" as="sourcePoint" />
+            <mxPoint x="790" y="90" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
